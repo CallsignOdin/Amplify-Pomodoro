@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>   
+    <h1>Pomodoro Counter : <span id="value">0</span></h1>
+    <button onclick="incrementPomCount()" id="add-btn"><b>Add</b></button>
+    <button onclick="decrementPomCount()" id="delete-btn"><b>Delete</b></button>
+    </div>
+
+    <div id="clock-container"">
+        <h1 id="clock-header">Clock</h1>
+
+        <div id="clock-default-time-container">
+            <button class="default-time-btn" onclick="setPomoClock()">Set 25mins</button>
+            <button class="default-time-btn" onclick="setBreakClock()">Set 5mins</button>
+        </div>
+
+        <div id="clock-body">
+            <div class="clock-section" id="clock-hour-section">
+                <p class="clock-section-number" id="clock-section-hour-number">0</p>
+                <div class="clock-number-btn-container">
+                    <button class="clock-number-btn" id="clock-hour-btn-increment" onclick="hourIncrement()">up</button>
+                    <button class="clock-number-btn" id="clock-hour-btn-decrement" onclick="hourDecrement()">down</button>
+                </div>
+                <h2 class="clock-section-id">Hours</h2>
+
+            </div>
+            <div class="clock-section" id="clock-minute-section">
+                <p class="clock-section-number" id="clock-section-minute-number">0</p>
+                <div class="clock-number-btn-container">
+                    <button class="clock-number-btn" id="clock-minute-btn-increment" onclick="minIncrement()">up</button>
+                    <button class="clock-number-btn" id="clock-minute-btn-decrement" onclick="minDecrement()">down</button>
+                </div>    
+                <h2 class="clock-section-id">Minutes</h2>
+            </div>
+            <div class="clock-section" id="clock-second-section">
+                <p class="clock-section-number" id="clock-section-second-number">0</p>
+                <div class="clock-number-btn-container">
+                    <button class="clock-number-btn" id="clock-second-btn-increment" onclick="secIncrement()">up</button>
+                    <button class="clock-number-btn" id="clock-second-btn-decrement" onclick="secDecrement()">down</button>
+                </div>
+                <h2 class="clock-section-id">Seconds</h2>
+            </div>
+        </div>
+        <div id="clock-control-section">
+            <button onclick="startClock()" id="clock-start-btn">Start</button>
+            <button onclick="stopClock()">Stop</button>
+        </div>
+    </div>
+
+    <section id="log-section">
+        <h2>Logs</h2>
+        <p>Total Time: <span id="hour-log-total">0</span>hours <span id="minute-log-total">0</span>minutes <span id="second-log-total">0</span>seconds</p>
+        <ul id="log-section-list"></ul>
+    </section>
+
+    <section id="disclaimer">
+        <h3>Disclaimer</h3>
+        <p class="highlight">After countdown reaches zero, the Pomodoro counter will automatically be adjusted.</p>
+    </section>
+</body>
+</html>

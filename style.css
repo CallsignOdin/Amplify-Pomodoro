@@ -1,0 +1,63 @@
+div {
+    text-align: center;
+}
+
+button {
+    height: 40px;
+    width: 80px;
+    color: black;
+    background-color: pink;
+}
+
+.default-time-btn {
+    width: auto;
+}
+
+.clock-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    
+}
+
+.clock-section-number {
+    font-size: 2rem;
+}
+
+.clock-number-btn {
+    height: 20px;
+    width: 50px;
+    text-align: center;
+
+}
+
+#add-btn {
+    background-color: Green;
+}
+
+#delete-btn {
+    background-color: red;
+}
+
+#clock-container {
+    
+
+}
+
+#clock-body {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: 0 auto;
+    
+}
+
+#disclaimer {
+    background: red;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
