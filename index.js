@@ -115,16 +115,13 @@ function hourDecrement() {
 
 
 function startClock() {
-    let secondsStart = 0;
-    let minutesStart = 0;
-    let hoursStart = 0;
+    const secondsStart = (parseInt(secondsEle.innerHTML) !== undefined) ? parseInt(secondsEle.innerHTML) : 0;
+    const minutesStart = (parseInt(minutesEle.innerHTML) !== undefined) ? parseInt(minutesEle.innerHTML) : 0;
+    const hoursStart = (parseInt(hoursEle.innerHTML) !== undefined) ? parseInt(hoursEle.innerHTML) : 0;
     let seconds = parseInt(secondsEle.innerHTML);
     let minutes = parseInt(minutesEle.innerHTML);
     let hours = parseInt(hoursEle.innerHTML);
 
-    secondsStart = parseInt(secondsEle.innerHTML);
-    minutesStart = parseInt(minutesEle.innerHTML);
-    hoursStart = parseInt(hoursEle.innerHTML);
     
     if(countdown !== null) {
         clearInterval(countdown);
