@@ -93,6 +93,12 @@ function minDecrement() {
     minutesEle.innerHTML = currValue;
 }
 
+function setHours(num) {
+    let currValue = num;
+
+    hoursEle.innerHTML = num;
+}
+
 function hourIncrement() {
     let currValue = parseInt(hoursEle.innerHTML);
 
@@ -108,7 +114,6 @@ function hourDecrement() {
         currValue--;
     }
     
-
     hoursEle.innerHTML = currValue;
 }
 
@@ -167,13 +172,13 @@ function createPomoLog(secs, mins, hrs) {
     let minsTotal = parseInt(minutesTotalEle.innerHTML) + mins;
     let hrsTotal = parseInt(hoursTotalEle.innerHTML) + hrs;
 
-    incrementTotalTime(secs, mins, hrs);
+    increaseTotalTime(secs, mins, hrs);
     listItem.innerHTML = `Pomodoro session logged on ${date.getHours()}:${date.getMinutes()} ${date.getMonth()}-${date.getDay()}-${date.getFullYear()} Time Logged: ${hrs}Hrs ${mins}mins ${secs}secs`;
 
     logSectionList.appendChild(listItem);
 }
 
-function incrementTotalTime(secs, mins, hrs) {
+function increaseTotalTime(secs, mins, hrs) {
     let secsTotal = parseInt(secondsTotalEle.innerHTML) + secs;
     let minsTotal = parseInt(minutesTotalEle.innerHTML) + mins;
     let hrsTotal = parseInt(hoursTotalEle.innerHTML) + hrs;
@@ -205,11 +210,19 @@ function incrementTotalTime(secs, mins, hrs) {
 }
 
 function setPomoClock() {
-    minutesEle.innerHTML = "25";
+    setSecs(0);
+    setMins(25);
+    setHours(0);
 }
 
 function setBreakClock() {
     minutesEle.innerHTML = "5";
+}
+
+function resetClock() {
+    setSecs(0);
+    setMins(0);
+    setHours(0);
 }
 
 function stopClock() {
