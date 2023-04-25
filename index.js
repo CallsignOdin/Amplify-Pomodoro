@@ -25,7 +25,6 @@ function incrementPomCount(secs, mins, hrs) {
         else {
             createPomoLog(secs, mins, hrs);
         }
-        
 }
 
 function decrementPomCount() {
@@ -44,10 +43,7 @@ function decrementPomCount() {
         removedItem = logContainer.pop();
 
         logSectionList.removeChild(removedItem);
-        
-
     }
-
     valueElement.innerHTML = currValue;
 }
 

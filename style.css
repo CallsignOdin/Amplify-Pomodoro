@@ -1,3 +1,8 @@
+html {
+    background-color: rgb(33, 31, 31);
+    color: white;
+}
+
 div {
     text-align: center;
 }
@@ -5,12 +10,14 @@ div {
 button {
     height: 40px;
     width: 80px;
-    color: black;
-    background-color: pink;
+    color: white;
+    background-color: #82473E;
+    border-radius: 7px;
 }
 
 .default-time-btn {
     width: auto;
+    border-radius: 7px;
 }
 
 .clock-section {
@@ -23,14 +30,23 @@ button {
 
 .clock-section-number {
     font-size: 2rem;
+    background-color: black;
+    border: solid #ffffff 1px;
+    margin: auto auto ;
 }
 
 .clock-number-btn {
     height: 20px;
     width: 50px;
     text-align: center;
-
+    border-radius: 4px;
 }
+
+.day-log-icon {
+    width: 1%;
+}
+
+
 
 #add-btn {
     background-color: Green;
@@ -41,22 +57,29 @@ button {
 }
 
 #clock-container {
-    
-
+    background-color: #3e7982;
+    width: 75%;
+    margin: 1.3rem auto auto auto;
+    border: solid #dad6d6 1px;
+    border-radius: 25px;
 }
 
 #clock-body {
     display: flex;
     justify-content: space-between;
     width: 75%;
-    margin: 0 auto;
+    margin: 1.3rem auto auto auto;
     
+}
+
+#log-section {
+    text-align: center;
 }
 
 #disclaimer {
     background: red;
     color: #ffffff;
-    position: absolute;
+    
     bottom: 0px;
     width: 100%;
 }
