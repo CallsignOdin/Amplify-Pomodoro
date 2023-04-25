@@ -1,15 +1,14 @@
-let valueElement = document.getElementById("value");
+const valueElement = document.getElementById("value");
+const logSectionList = document.getElementById("log-section-list");
+const secondsEle = document.getElementById("clock-section-second-number");
+const minutesEle = document.getElementById("clock-section-minute-number");
+const hoursEle = document.getElementById("clock-section-hour-number");
+const secondsTotalEle = document.getElementById("second-log-total");
+const minutesTotalEle = document.getElementById("minute-log-total");
+const hoursTotalEle = document.getElementById("hour-log-total");
 let countdown; //used for timer interval - needs global scope
-let logSectionList = document.getElementById("log-section-list");
-let secondsEle = document.getElementById("clock-section-second-number");
-let minutesEle = document.getElementById("clock-section-minute-number");
-let hoursEle = document.getElementById("clock-section-hour-number");
-let secondsTotalEle = document.getElementById("second-log-total");
-let minutesTotalEle = document.getElementById("minute-log-total");
-let hoursTotalEle = document.getElementById("hour-log-total");
 
 function incrementPomCount(secs, mins, hrs) {
-    valueElement = document.getElementById("value");
     let seconds = parseInt(secondsEle.innerHTML);
     let minutes = parseInt(minutesEle.innerHTML);
     let hours = parseInt(hoursEle.innerHTML);
@@ -28,7 +27,6 @@ function incrementPomCount(secs, mins, hrs) {
 }
 
 function decrementPomCount() {
-    valueElement = document.getElementById("value");
     let currValue = parseInt(valueElement.innerHTML);
     let logItem;
     let logContainer;
@@ -48,81 +46,70 @@ function decrementPomCount() {
 }
 
 function secIncrement() {
-    valueElement = document.getElementById("clock-section-second-number");
-    let currValue = parseInt(valueElement.innerHTML);
+    let currValue = parseInt(secondsEle.innerHTML);
 
     currValue++;
 
-    valueElement.innerHTML = currValue;
+    secondsEle.innerHTML = currValue;
 }
 
 function secDecrement() {
-    valueElement = document.getElementById("clock-section-second-number");
-    let currValue = parseInt(valueElement.innerHTML);
+    let currValue = parseInt(secondsEle.innerHTML);
 
     if(currValue > 0) {
         currValue--;
     }
 
-    valueElement.innerHTML = currValue;
+    secondsEle.innerHTML = currValue;
 }
 
 function setSecs(num) {
-    valueElement = document.getElementById("clock-section-second-number");
-
     let newValue = num;
 
-    valueElement.innerHTML = newValue;
+    secondsEle.innerHTML = newValue;
 }
 
 function minIncrement() {
-    valueElement = document.getElementById("clock-section-minute-number");
-    let currValue = parseInt(valueElement.innerHTML);
+    let currValue = parseInt(minutesEle.innerHTML);
 
     currValue++;
 
-    valueElement.innerHTML = currValue;
+    minutesEle.innerHTML = currValue;
 }
 
 function setMins(num) {
-    valueElement = document.getElementById("clock-section-minute-number");
-
     let currValue = num;
 
-    valueElement.innerHTML = currValue;
+    minutesEle.innerHTML = currValue;
 }
 
 function minDecrement() {
-    valueElement = document.getElementById("clock-section-minute-number");
-    let currValue = parseInt(valueElement.innerHTML);
+    let currValue = parseInt(minutesEle.innerHTML);
 
     if(currValue > 0) {
         currValue--;
     }
-    
 
-    valueElement.innerHTML = currValue;
+    minutesEle.innerHTML = currValue;
 }
 
 function hourIncrement() {
-    valueElement = document.getElementById("clock-section-hour-number");
-    let currValue = parseInt(valueElement.innerHTML);
+    let currValue = parseInt(hoursEle.innerHTML);
 
     currValue++;
 
-    valueElement.innerHTML = currValue;
+    hoursEle.innerHTML = currValue;
 }
 
 function hourDecrement() {
-    valueElement = document.getElementById("clock-section-hour-number");
-    let currValue = parseInt(valueElement.innerHTML);
+    let currValue = parseInt(hoursEle.innerHTML);
 
     if(currValue > 0) {
         currValue--;
     }
     
 
-    valueElement.innerHTML = currValue;
+    hoursEle.innerHTML = currValue;
 }
 
 
