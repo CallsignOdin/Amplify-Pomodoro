@@ -223,6 +223,8 @@ function resetClock() {
     setSecs(0);
     setMins(0);
     setHours(0);
+
+    stopClock();
 }
 
 function stopClock() {
